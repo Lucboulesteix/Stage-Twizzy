@@ -13,5 +13,7 @@ Contains:
     * Documentation and other presentation material
     * Code for system calibration and other "offline" work
     * Code for real-time sensor fusion on the vehicle
+Uses ROS software layer to interface all sensors, display on RVIZ/RQT
+Uses MobileNet object detector wth custom msg format for object detection and camera->LiDAR fusion 
 
    
