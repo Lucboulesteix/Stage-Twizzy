@@ -1,0 +1,69 @@
+<!-- commented:
+ /velodyne_points
+  /velodyne_nodelet_manager/bond
+  /velodyne_nodelet_manager_driver/parameter_descriptions
+  /velodyne_nodelet_manager_driver/parameter_updates
+  /velodyne_nodelet_manager_laserscan/parameter_descriptions
+  /velodyne_nodelet_manager_laserscan/parameter_updates
+  /velodyne_nodelet_manager_transform/parameter_descriptions
+  /velodyne_nodelet_manager_transform/parameter_updates
+  /cam_p/infra1/camera_info 
+  /cam_p/infra1/image_rect_raw 
+  /cam_p/infra2/camera_info 
+  /cam_p/infra2/image_rect_raw 
+  /cam_p/infra1/image_rect_raw 
+  /cam_p/infra2/camera_info 
+  /cam_p/infra2/image_rect_raw 
+  /cam_p/depth/camera_info 
+  /cam_p/depth/image_rect_raw
+  /cam_p/extrinsics/depth_to_infra1 
+  /cam_p/extrinsics/depth_to_infra2 
+  /cam_p/gyro/imu_info 
+  /cam_p/gyro/sample 
+  /cam_p/accel/imu_info 
+  /cam_p/accel/sample
+  /cam_p/extrinsics/depth_to_infra1 
+  /cam_p/extrinsics/depth_to_infra2 
+  /fix_ublox
+  /scan
+  /time_reference_gps_inertielle
+  /time_reference_ublox
+  /vel_gps_inertielle
+  /vel_ublox
+  /cam_p/depth/image_rect_raw   
+-->
+
+
+<launch>
+  <node 
+	pkg="rosbag" 
+	type="record" 
+	args="record -o /home/srodri2/Bureau/ 
+
+	/cam_p/color/image_raw
+	/cam_p/color/camera_info	
+
+	/cam_p/aligned_depth_to_color/camera_info 
+	/cam_p/aligned_depth_to_color/image_raw
+	
+	/cam_p/color/object_detector
+	/cam_p/color/combined_image_rect_raw
+
+  	/cam_p/gyro/imu_info 
+  	/cam_p/gyro/sample 
+  	/cam_p/accel/imu_info 
+  	/cam_p/accel/sample
+  
+  	/tf
+  	/tf_static
+  
+  	/an_device/FilterStatus 
+  	/an_device/Imu 
+  	/an_device/NavSatFix 
+  	/an_device/SystemStatus 
+  	/an_device/Twist
+  
+  	/velodyne_points
+  	"
+	name="record" output="screen" />
+</launch>

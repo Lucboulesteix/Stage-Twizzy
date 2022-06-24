@@ -1,0 +1,3 @@
+<launch>
+	<node type="rqt_graph" name="ROS_System" pkg="rqt_graph" />
+</launch>

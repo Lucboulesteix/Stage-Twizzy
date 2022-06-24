@@ -1,0 +1,12 @@
+## ALL
+roscore
+
+## Velodyne
+roslaunch velodyne_pointcloud VLP16_points.launch
+
+## Show velodyne 
+rosrun rviz rviz -f velodyne
+
+
+## Realsense
+

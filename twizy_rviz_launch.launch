@@ -1,0 +1,5 @@
+<launch>
+  <node type="rviz" name="Display" pkg="rviz" args="-d /home/srodri2/Bureau/twizy_app/twizy_rviz.rviz"/>
+</launch>
+
+

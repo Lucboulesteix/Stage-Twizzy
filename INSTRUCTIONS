@@ -1,0 +1,29 @@
+### FICHIERS INCLUS DANS CE REPERTOIRE ###
+
+[INCLUS DANS l'UTILIAIRE DE COMMANDE]
+ros_velodyne_vision_embed.py : projection LiDAR sur image
+ros_inv_projection_embed.py: projection 'inverse' d'objets détéctés par AI/CNN dans LiDAR
+ros_simple_embed.py: détéction de plan de sol (hough transform) avec projection LiDAR
+ros_velodyne_road_detect.py: détection de plan et de bords de route avec traçage de chaussée
+
+twizy_app_manager_rev2.py: utilitaire de commande pour piloter le système de perception
+run_v2.sh: script bash pour lancer l'utilitaire (nécéssaire pour utiliser le détécteur d'objets)
+
+[DONNES]
+data.csv: paramètres (intrinsèques, extrinsèques) du système ### NE PAS SUPPRIMER OU MODIFIER STRUCTURE
+
+[AUTRES PROGRAMMES]
+twizy_app_manager.py: utilitaire de commande tel qu'il est en avril 2022 (pas de blocs de perception)
+run.sh : script pour lancer l'utilitaire de commande (nécessaire pour utiliser le détécteur d'objets)
+
+ros_hough_edges.py: detection du plan de route avec reprojection (état incertain)
+ros_velodyne_sides.py: détéction et trace des bords routiers avec statistiques
+
+[AUTRE]
+icon.png: icone pour l'utilitaire de commande
+fichiers .launch : fichiers nécéssaires à l'utiliaire de commande
+fichiers .rviz : fichiers de configuration pour RVIZ
+
+### DOSSIERS ###
+"unfinished": programmes non complets ou partillement complets, blocs intermédiaires
+"object_detector": système de detection d'objets MobileNet
